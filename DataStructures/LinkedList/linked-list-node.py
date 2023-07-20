@@ -55,7 +55,7 @@ class LinkedList:
         unwanted_node = leader.next
         leader.next = unwanted_node.next
         self.length -= 1
-        return self.print_list()
+        return unwanted_node
 
     def traverse_to_index(self, index):
         counter = 0
@@ -64,6 +64,7 @@ class LinkedList:
             current_node = current_node.next
             counter += 1
         return current_node
+        
     def print_list(self):
         current_node = self.head
         while current_node is not None:
